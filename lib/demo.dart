@@ -18,9 +18,14 @@ class _DemoState extends State<Demo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Example'),
+        centerTitle: true,
+        title: Text(
+          'Example',
+          style: TextStyle(fontWeight: FontWeight.w700, fontSize: 40),
+        ),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           GestureDetector(
@@ -30,10 +35,13 @@ class _DemoState extends State<Demo> {
               }));
             },
             child: const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(20.0),
               child: Text(
                 'Basic TabBar',
-                style: TextStyle(fontSize: 20, color: Colors.red),
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.w600),
               ),
             ),
           ),
@@ -44,10 +52,13 @@ class _DemoState extends State<Demo> {
               }));
             },
             child: const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(25.0),
               child: Text(
                 'Customizing TabBar Indicator',
-                style: TextStyle(fontSize: 20, color: Colors.red),
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.purple,
+                    fontWeight: FontWeight.w600),
               ),
             ),
           ),
@@ -58,10 +69,13 @@ class _DemoState extends State<Demo> {
               }));
             },
             child: const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(25.0),
               child: Text(
                 'Scrollable TabBar',
-                style: TextStyle(fontSize: 20, color: Colors.red),
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.w600),
               ),
             ),
           ),
@@ -72,10 +86,13 @@ class _DemoState extends State<Demo> {
               }));
             },
             child: const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(25.0),
               child: Text(
                 'Listening for Tab Change Event',
-                style: TextStyle(fontSize: 20, color: Colors.red),
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.purple,
+                    fontWeight: FontWeight.w600),
               ),
             ),
           ),
@@ -86,10 +103,13 @@ class _DemoState extends State<Demo> {
               }));
             },
             child: const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(25.0),
               child: Text(
-                'Implementing Tab Bar without AppBar',
-                style: TextStyle(fontSize: 20, color: Colors.red),
+                'Tab Bar without AppBar',
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.w600),
               ),
             ),
           ),
@@ -100,10 +120,13 @@ class _DemoState extends State<Demo> {
               }));
             },
             child: const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(25.0),
               child: Text(
                 'Preserving the state of Tabs',
-                style: TextStyle(fontSize: 20, color: Colors.red),
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.purple,
+                    fontWeight: FontWeight.w600),
               ),
             ),
           ),
