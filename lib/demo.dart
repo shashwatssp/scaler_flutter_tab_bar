@@ -19,118 +19,65 @@ class _DemoState extends State<Demo> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          'Example',
+        title: const Text(
+          'Example App',
           style: TextStyle(fontWeight: FontWeight.w700, fontSize: 40),
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return BasicTabBar();
-              }));
-            },
-            child: const Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Text(
-                'Basic TabBar',
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.blue,
-                    fontWeight: FontWeight.w600),
-              ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const BasicTabBar();
+                  }));
+                },
+                child: const Text('Basic TabBar')),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const CustomTabBar();
+                }));
+              },
+              child: const Text('Customizing TabBar Indicator'),
             ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return const CustomTabBar();
-              }));
-            },
-            child: const Padding(
-              padding: EdgeInsets.all(25.0),
-              child: Text(
-                'Customizing TabBar Indicator',
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.purple,
-                    fontWeight: FontWeight.w600),
-              ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ListenTabBar();
+                }));
+              },
+              child: const Text('Listening for Tab Change Event'),
             ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return const ScrollTabBar();
-              }));
-            },
-            child: const Padding(
-              padding: EdgeInsets.all(25.0),
-              child: Text(
-                'Scrollable TabBar',
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.blue,
-                    fontWeight: FontWeight.w600),
-              ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const TabBarW();
+                }));
+              },
+              child: const Text('Tab Bar without AppBar'),
             ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return const ListenTabBar();
-              }));
-            },
-            child: const Padding(
-              padding: EdgeInsets.all(25.0),
-              child: Text(
-                'Listening for Tab Change Event',
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.purple,
-                    fontWeight: FontWeight.w600),
-              ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const TabBarP();
+                }));
+              },
+              child: const Text('Preserving the state of Tabs'),
             ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return const TabBarW();
-              }));
-            },
-            child: const Padding(
-              padding: EdgeInsets.all(25.0),
-              child: Text(
-                'Tab Bar without AppBar',
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.blue,
-                    fontWeight: FontWeight.w600),
-              ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ScrollTabBar();
+                }));
+              },
+              child: const Text('Scrollable TabBar'),
             ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return const TabBarP();
-              }));
-            },
-            child: const Padding(
-              padding: EdgeInsets.all(25.0),
-              child: Text(
-                'Preserving the state of Tabs',
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.purple,
-                    fontWeight: FontWeight.w600),
-              ),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

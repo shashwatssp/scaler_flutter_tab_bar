@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scaler_tab_bar/basic_tabBar.dart';
-import 'package:scaler_tab_bar/customizing_tabBar_indicator.dart';
-import 'package:scaler_tab_bar/demo.dart';
-import 'package:scaler_tab_bar/listening_for_tab_change.dart';
-import 'package:scaler_tab_bar/preserve_state.dart';
-import 'package:scaler_tab_bar/scrollable_tabBar.dart';
-import 'package:scaler_tab_bar/tabBar_without_appBar.dart';
+import 'demo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,11 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      theme: ThemeData.dark(
         useMaterial3: true,
       ),
-      home: Demo(),
+      home: const Demo(),
     );
   }
 }
